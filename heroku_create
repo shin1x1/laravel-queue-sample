@@ -10,3 +10,5 @@ heroku addons:add sendgrid
 heroku addons:add memcachier
 heroku addons:add papertrail
 heroku addons:add librato
+heroku addons:add librato
+heroku addons:add iron_mq
