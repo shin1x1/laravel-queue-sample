@@ -1,15 +1,21 @@
 <?php
 
 return [
-    'default' => 'iron',
+    'default' => 'beanstalkd',
     'connections' => [
-        'iron' => array(
-            'driver' => 'iron',
-            'host' => 'mq-aws-us-east-1.iron.io',
-            'token' =>  getenv('IRON_MQ_TOKEN'),
-            'project' => getenv('IRON_MQ_PROJECT_ID'),
-            'queue' => 'sample',
-            'encrypt' => true,
-        ),
+        'driver' => 'beanstalkd',
+        'host' => 'localhost',
+        'queue' => 'default',
+        'ttr' => 60,
     ],
+//    'default' => 'sqs',
+//    'connections' => [
+//        'sqs' => [
+//            'driver' => 'sqs',
+//            'key' => getenv('AWS_ACCESS_KEY_ID'),
+//            'secret' => getenv('AWS_SECRET_ACCESS_KEY'),
+//            'queue' => getenv('AWS_SQS_URL'),
+//            'region' => 'ap-northeast-1',
+//        ],
+//    ],
 ];
