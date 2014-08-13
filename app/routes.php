@@ -16,6 +16,7 @@ use Illuminate\Queue\Jobs\Job;
 
 Route::get('/queue/push', function () {
     Queue::push('MyWorker', ['message' => 'Hello!', 'date' => Carbon::now()]);
+    Queue::later(10, 'MyWorker', ['message' => 'Delayed', 'date' => Carbon::now()]);
     return 'ok';
 });
 
@@ -27,7 +28,7 @@ class MyWorker
 {
     public function fire(Job $job, array $data)
     {
-        echo sprintf('[%s] %s at %s', Carbon::now(), $data['message'], $data['date']['date']);
+        echo sprintf('[%s] %s at %s', Carbon::now(), $data['message'], $data['date']['date']) . PHP_EOL;
         $job->delete();
     }
 }
