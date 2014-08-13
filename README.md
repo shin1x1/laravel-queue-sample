@@ -1,25 +1,7 @@
-Laravel Base Project
+Laravel Queue Sample
 =====================
 
-[![Build Status](https://travis-ci.org/shin1x1/laravel-base-project.svg?branch=master)](https://travis-ci.org/shin1x1/laravel-base-project)
-
-My Base Project with Laravel 4
-
-## Installation
-
-use `composer create-project` command.
-
-```
-$ composer create-project shin1x1/laravel-base-project . -s dev
-```
-
-## Enable Laravel 4 Debuger
-
-[https://github.com/barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
-
-```
-$ php artisan debugbar:publish
-```
+[![Build Status](https://travis-ci.org/shin1x1/laravel-queue-sample.svg?branch=master)](https://travis-ci.org/shin1x1/laravel-queue-sample)
 
 ## Deploy to Heroku
 
