@@ -23,12 +23,3 @@ Route::get('/queue/push', function () {
 Route::get('/', function () {
     return View::make('hello');
 });
-
-class MyWorker
-{
-    public function fire(Job $job, array $data)
-    {
-        echo sprintf('[%s] %s at %s', Carbon::now(), $data['message'], $data['date']['date']) . PHP_EOL;
-        $job->delete();
-    }
-}
